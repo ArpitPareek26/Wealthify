@@ -18,7 +18,7 @@ import { Toaster } from "react-hot-toast";
 import ErrorBoundary from "./Components/ErrorBoundary";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import Blog from "./Pages/Blog";
-import FAQ from "./Pages/Faq";
+import FAQ from "./Pages/FAQ";
 import Support from "./Pages/Support";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsOfService from "./Pages/TermsOfService";
