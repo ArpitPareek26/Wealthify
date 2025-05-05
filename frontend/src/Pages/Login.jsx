@@ -24,7 +24,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/auth/users/login",
+        "https://wealthify-backend.onrender.com/api/auth/users/login",
         formData
       );
 
