@@ -1,0 +1,47 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files (protect sensitive credentials)
+config/.env
+config/.env.local
+config/.env.development
+config/.env.production
+config/.env.test
+
+
+# Logs
+logs/
+*.log
+log.txt
+
+# Database-related files
+dump.rdb
+mongod.lock
+mongodb-data/
+
+# Temporary files
+tmp/
+temp/
+
+# Testing & coverage
+coverage/
+.nyc_output/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor settings
+.vscode/
+.idea/
+*.swp
+
+# Git itself
+.git/
+
+# Prevent committing lock files (optional)
+package-lock.json
+yarn.lock
