@@ -17,7 +17,6 @@ const Navbar = () => {
       await axios.post(
         "https://wealthify-backend.onrender.com/api/auth/users/logout",
         {},
-        { withCredentials: true }
       );
       // Delegate state handling to the auth context
       logout();
