@@ -25,7 +25,8 @@ const Login = () => {
     try {
       const response = await axios.post(
         "https://wealthify-backend.onrender.com/api/auth/users/login",
-        formData
+        formData, {
+        withCredentials: true,}
       );
 
       if (response.status === 200) {
