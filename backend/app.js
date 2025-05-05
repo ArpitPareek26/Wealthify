@@ -13,14 +13,7 @@ dotenv.config({ path: "./config/config.env" });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(
-  cors({
-    origin: [process.env.FRONTEND_URL || "http://localhost:5173"],
-    methods: ["POST", "GET", "PUT", "PATCH", "DELETE"],
-    credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+app.use(cors())
 
 connectDB();
 
