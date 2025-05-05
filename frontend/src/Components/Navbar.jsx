@@ -15,7 +15,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:4000/api/auth/users/logout",
+        "https://wealthify-backend.onrender.com/api/auth/users/logout",
         {},
         { withCredentials: true }
       );
