@@ -29,7 +29,7 @@ const TransactionList = () => {
       return;
     }
 
-    const url = `http://localhost:4000/api/auth/transactions/${id}`;
+    const url = `https://wealthify-backend.onrender.com/api/auth/transactions/${id}`;
 
     try {
       const response = await axios.delete(url, {
@@ -61,7 +61,7 @@ const TransactionList = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/auth/transactions/${editingTransaction._id}`,
+        `https://wealthify-backend.onrender.com/api/auth/transactions/${editingTransaction._id}`,
         updatedData,
         {
           headers: { Authorization: `Bearer ${token}` },
