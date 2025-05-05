@@ -15,12 +15,19 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL || "http://localhost:5173"],
-    methods: ["POST", "GET", "PUT", "PATCH", "DELETE"],
+    origin: [process.env.FRONTEND_URL || "https://wealthify-frontend.onrender.com"],
+    methods: ["POST", "GET", "PUT", "PATCH", "DELETE", "OPTIONS"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+app.options('/api/auth/users/login', (req, res) => {
+  res.header('Access-Control-Allow-Origin', 'https://wealthify-frontend.onrender.com');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  return res.status(200).end();
+});
 
 connectDB();
 
