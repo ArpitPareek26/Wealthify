@@ -37,7 +37,7 @@ const SignUp = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/auth/users/register",
+        "https://wealthify-backend.onrender.com/api/auth/users/register",
         formData
       );
       toast.success("Sign-up successful! Please login to continue.", {

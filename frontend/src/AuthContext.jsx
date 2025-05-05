@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }) => {
 
     try {
       const response = await axios.get(
-        `http://localhost:4000/api/auth/transactions/all/user/${userId}`,
+        `https://wealthify-backend.onrender.com/api/auth/transactions/all/user/${userId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setTransactions(response.data);
@@ -69,7 +69,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const data = { ...transactionData, user: userId };
       const response = await axios.post(
-        "http://localhost:4000/api/auth/transactions/add",
+        "https://wealthify-backend.onrender.com/api/auth/transactions/add",
         data,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -86,7 +86,7 @@ export const AuthProvider = ({ children }) => {
 
     try {
       const response = await axios.get(
-        `http://localhost:4000/api/auth/budgets/all/user/${userId}`,
+        `https://wealthify-backend.onrender.com/api/auth/budgets/all/user/${userId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setBudget(response.data);
@@ -119,7 +119,7 @@ export const AuthProvider = ({ children }) => {
 
     try {
       const budgetPromises = validBudgets.map((budgetItem) =>
-        axios.post("http://localhost:4000/api/auth/budgets/add", budgetItem, {
+        axios.post("https://wealthify-backend.onrender.com/api/auth/budgets/add", budgetItem, {
           headers: { Authorization: `Bearer ${token}` },
         })
       );
@@ -140,7 +140,7 @@ export const AuthProvider = ({ children }) => {
   const deleteBudget = async (budgetId) => {
     if (!budgetId) return;
     try {
-      await axios.delete(`http://localhost:4000/api/auth/budgets/${budgetId}`, {
+      await axios.delete(`https://wealthify-backend.onrender.com/api/auth/budgets/${budgetId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       // Update state by removing the deleted budget.
